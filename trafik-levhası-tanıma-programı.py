@@ -6,7 +6,7 @@ from sklearn.model_selection import train_test_split
 from keras.models import Sequential
 from keras.layers import Conv2D, MaxPool2D, Dense, Flatten
 
-inputBasePath = r"C:\Users\C A K A\Desktop\traffic_Data"
+inputBasePath = r"C:\Users\C A K A\Desktop\traffic_Data" #kendi veri setinizin yoluna göre ayarlayabilrsiniz 
 trainingFolder = 'DATA'
 labels_csv_path = os.path.join(inputBasePath, "labels.csv")
 
@@ -47,7 +47,7 @@ def convolution_model():
     ])
     return cnnModel
 
-epochs = 50
+epochs = 50  # epochs değerini ayarlayabilirsiniz 
 batchSize = 14
 cnnModel = convolution_model()
 cnnModel.summary()
